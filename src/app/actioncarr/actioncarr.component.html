@@ -1,0 +1,34 @@
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      <ion-item>
+        <ion-icon (click)="dismiss()" slot="end" name="close" class="icon-arrow"></ion-icon>
+        <ion-label>{{dataSMS.car}}</ion-label>
+      </ion-item>
+    </ion-list-header>
+    <ion-item (click)="sendSMS('stop',dataSMS.modelGPS,dataSMS.simNumber)">
+      <ion-icon slot="start" name="car-sport"></ion-icon>
+      <ion-label class="custom-ion-label">Detener motor vehículo</ion-label>
+    </ion-item>
+    <ion-item (click)="sendSMS('resume',dataSMS.modelGPS,dataSMS.simNumber)">
+      <ion-icon slot="start" name="car-sport"></ion-icon>
+      <ion-label class="custom-ion-label">Enceder motor vehículos</ion-label>
+    </ion-item>
+    <ion-item (click)="sendSMS('arm',dataSMS.modelGPS,dataSMS.simNumber)">
+      <ion-icon slot="start" name="car-sport"></ion-icon>
+      <ion-label class="custom-ion-label">Abrir Puerta</ion-label>
+    </ion-item>
+    <!--  <ion-item (click)="sendSMS('disarmm',dataSMS.modelGPS,dataSMS.simNumber)">
+    <ion-icon slot="start" name="car-sport"></ion-icon>
+    <ion-label class="custom-ion-label">Cerrar Puerta</ion-label>
+  </ion-item> -->
+    <ion-item (click)="sendSMS('monitor',dataSMS.modelGPS,dataSMS.simNumber)">
+      <ion-icon slot="start" name="car-sport"></ion-icon>
+      <ion-label class="custom-ion-label">Activar microfono</ion-label>
+    </ion-item>
+    <!-- <ion-item (click)="sendSMS('Tracker',dataSMS.modelGPS,dataSMS.simNumber)">
+     <ion-icon slot="start" name="car-sport"></ion-icon>
+    <ion-label class="custom-ion-label">Desactivar microfono</ion-label>
+  </ion-item> -->
+  </ion-list>
+</ion-content>

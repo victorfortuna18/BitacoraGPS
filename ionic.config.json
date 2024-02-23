@@ -1,0 +1,7 @@
+{
+  "name": "BitacoraGPS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

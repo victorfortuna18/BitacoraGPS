@@ -1,0 +1,32 @@
+<ion-header>
+ <ion-toolbar class="new-background-color">
+    <ion-title>
+      Ultimas ubicaciones
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cerrar</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>  
+
+<ion-content>
+    <div #divMap class="map">
+    </div>
+
+    <ion-chip class="miubicacion" (click)="myLocation()">
+    <ion-label>
+      Mi última ubicación
+    </ion-label> 
+    <ion-icon name="locate"></ion-icon>    
+  </ion-chip>
+
+  <!-- <ion-chip class="aceptar" (click)="aceptar()">
+    <ion-label class="normal">Aceptar</ion-label> 
+    <ion-icon name="checkmark"></ion-icon> 
+  </ion-chip> -->
+  </ion-content>
+
+  

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BitacoraGPS</string>
+    <string name="title_activity_main">BitacoraGPS</string>
+    <string name="package_name">com.app.bitacora</string>
+    <string name="custom_url_scheme">com.app.bitacora</string>
+</resources>

@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar class="new-background-color">
+        <ion-title class="custom-ion-title">Principal</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row>
+        <ion-col (click)="goToListDevice()">
+            <div align="center">
+                <br>
+                <ion-icon slot="start" name="car" style="width: 120px;height: 120px">
+
+                </ion-icon>
+
+            </div>
+            <p align="center">Lista de Vehículos</p>
+
+        </ion-col>
+        <ion-col (click)="goToLastPosition()">
+            <div align="center">
+                <br>
+                <ion-icon slot="start" name="map" style="width: 120px;height: 120px">
+
+                </ion-icon>
+            </div>
+            <p align="center">Últimas Posiciones</p>
+        </ion-col>
+
+
+    </ion-row>
+    <ion-row>
+        <ion-col *ngIf="rpt == 0" (click)="goToCarAction()">
+            <div align="center">
+                <br>
+                <ion-icon slot="start" name="mail" style="width: 120px;height: 120px">
+                </ion-icon>
+            </div>
+            <p align="center">Acciones de Vehículos</p>
+        </ion-col>
+        <ion-col (click)="goToListReport()">
+            <div align="center">
+                <br>
+                <ion-icon slot="start" name="document" style="width: 120px;height: 120px">
+                </ion-icon>
+            </div>
+            <p align="center">Consulta de Movimientos</p>
+        </ion-col>
+
+    </ion-row>
+    <ion-row>
+        <ion-col *ngIf="admin == 1" (click)="goToCustomMessage()">
+            <div align="center">
+                <br>
+                <ion-icon slot="start" name="mail" style="width: 120px;height: 120px">
+                </ion-icon>
+            </div>
+            <p align="center">Mensaje Personalizado</p>
+        </ion-col>
+        <ion-col (click)="goToLogin()">
+            <div align="center">
+                <br>
+                <ion-icon slot="start" name="exit" style="width: 120px;height: 120px">
+                </ion-icon>
+            </div>
+            <p align="center">Cerrar sesión</p>
+        </ion-col>
+
+    </ion-row>
+    <ion-row>
+        <ion-col *ngIf="admin == 1" (click)="reload()">
+            <div align="center">
+                <br>
+                <ion-icon slot="start" name="document" style="width: 120px;height: 120px">
+                </ion-icon>
+            </div>
+            <p align="center">Reestablecer opciones</p>
+        </ion-col>
+    </ion-row>
+
+</ion-content>

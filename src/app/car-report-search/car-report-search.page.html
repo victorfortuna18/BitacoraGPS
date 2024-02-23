@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-icon (click)="goToListCarReport()" slot="start" name="arrow-back" class="icon-arrow"></ion-icon>
+    <ion-title class="custom-ion-title">Reporte de Movimiento Diario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="sendInfoReport()">
+    <ion-list>
+      <ion-list-header>
+        <ion-item>
+          <ion-icon slot="start" name="calendar"></ion-icon>
+          <ion-label>Consultar movimientos</ion-label>
+        </ion-item>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Seleccionar fecha:</ion-label>
+        <ion-datetime [(ngModel)]="infoReport.dateFrom" name="dateFrom" displayFormat="YYYY MM DD"
+          display-timezone="utc">
+        </ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Seleccionar hora inicio:</ion-label>
+        <ion-datetime [(ngModel)]="infoReport.dateFromI" name="dateFrom" displayFormat="H:mm" display-timezone="utc">
+        </ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Seleccionar hora fin:</ion-label>
+        <ion-datetime [(ngModel)]="infoReport.dateFromF" name="dateFrom" displayFormat="H:mm" display-timezone="utc">
+        </ion-datetime>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-label>Buscar hasta el:</ion-label>
+        <ion-datetime [(ngModel)]="infoReport.dateTo" name="dateTo" display-timezone="utc">
+        </ion-datetime>
+      </ion-item> -->
+      <!-- <ion-item>
+        <ion-label>Número de registros</ion-label>
+        <ion-select name="limit" [(ngModel)]="infoReport.limit">
+          <ion-select-option *ngFor="let limit of numberRegister" [value]="limit">{{limit}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item> -->
+    </ion-list>
+
+    <!--  <ion-card>
+      <ion-card-content>
+        La busqueda se realiza a partir de las 00:00 horas de la fecha seleccionada.
+      </ion-card-content>
+    </ion-card> -->
+
+
+    <div align="center">
+      <ion-button shape="round" type="submit">Consultar</ion-button>
+    </div>
+
+  </form>
+
+</ion-content>

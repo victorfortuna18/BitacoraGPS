@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+     <ion-icon (click)="goToHome()" slot="start" name="arrow-back" class="icon-arrow"></ion-icon>
+      <ion-title class="custom-ion-title">{{ folder }}</ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <googlemapsWayPoints></googlemapsWayPoints>  
+
+ <!--  <img src="assets/img/mapa.jpeg" alt="" /> -->
+  <!--   <div id="container">
+    <strong class="capitalize">{{ folder }}</strong>
+    <p>
+      Explore
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components"
+        >UI Components</a
+      >
+    </p>
+  </div> -->
+</ion-content>

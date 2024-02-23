@@ -1,0 +1,45 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding style="background-color: #840017">
+  <form (submit)="doLogin()">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <img src="assets/img/logoLogin.png" alt="" />
+
+    <p align="center" style="color: grey; font-size: large">
+      Ingrese los datos de su cuenta para iniciar
+    </p>
+    <br />
+    <br />
+    <ion-item>
+      <ion-label position="floating">Cuenta</ion-label>
+      <ion-input [(ngModel)]="loginData.account" name="account" type="text" placeholder="Cuenta"></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input [(ngModel)]="loginData.user" name="user" type="text" placeholder="Usuario"></ion-input>
+    </ion-item>
+    <br />
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="loginData.password" name="password" type="password" placeholder="Contraseña"></ion-input>
+    </ion-item>
+    <br />
+    <div align="center">
+      <ion-button shape="round" type="submit">Entrar</ion-button>
+      <!-- <ion-button (click)="addDirection()">Mapa</ion-button> -->
+    </div>
+
+
+  </form>
+  <!-- <div #mapElement class="map"></div> -->
+</ion-content>

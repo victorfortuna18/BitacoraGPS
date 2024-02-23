@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-icon (click)="goToListCarCustomMessage()" slot="start" name="arrow-back" class="icon-arrow"></ion-icon>
+    <ion-title class="custom-ion-title">Mensaje Personalizado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      Por favor ingrese el mensaje que desea enviar.
+    </ion-card-content>
+  </ion-card>
+  <form (submit)="sendMessage()">
+    <ion-item>
+      <ion-label position="stacked">Mensaje</ion-label>
+      <ion-textarea [(ngModel)]="dataMessage.message" name="message"
+        style="border-radius:10px;border: 2px solid #6B9727;">
+      </ion-textarea>
+    </ion-item>
+    <br>
+    <div align="center">
+      <ion-button shape="round" type="submit">Enviar Mensaje</ion-button>
+    </div>
+  </form>
+
+</ion-content>
